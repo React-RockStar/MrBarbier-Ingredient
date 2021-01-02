@@ -1,0 +1,93 @@
+mixin products-slider($articles, $sliderId)
+  .products-slider(id="#{sliderId}")
+    - foreach($articles as $article)
+      .product-card
+        .product-image
+          img(src="#{$article.imgSrc}")
+        .macaron
+          .int #{$article.price} €
+        .product-info
+          .product-type #{$article["product-type"]}
+          .product-name #{$article["product-name"]}
+
+mixin happy-users
+  .happy-users
+    block slides
+      - $happyUsers = [["img" => "/images/homePage/Avis-Monsieur-Barbier-1.jpg", "text" => "Au début, j'ai testé le site pour ses prix imbattables, puis je suis resté pour la qualité des lames, et la souplesse des formules, et je le recommande pour la gentillesse de l’équipe !", "city" => "Seignosse", "name" => "David S."],["img" => "/images/homePage/Avis-Monsieur-Barbier-2.jpg", "text" => "Dix années que je partage la vie de mon homme, et avec votre coffret, vous m'avez permis de lui offrir LE cadeau original, on aurait dit un gamin à qui on offre sa première petite voiture !", "city" => "Paris", "name" => "Eleonore"],["img" => "/images/homePage/Avis-Monsieur-Barbier-3.jpg", "text" => "Chez Peppino, nous sommes barbiers de père en fils, et vos produits sont dignes des plus grandes marques professionnelles, toutes nos félicitations !", "city" => "Rome", "name" => "Pietro C."]]
+      - foreach($happyUsers as $happyUser) 
+        .happy-user
+          img(src="#{$happyUser.img}")
+          .text #{$happyUser.text}
+          .name #{$happyUser.name}
+          .city.grey-subtitle #{$happyUser.city}
+
+extends layouts/NEW_layout.pug
+
+append styles
+  link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css")
+  link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css")
+  link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css")
+  link(rel="stylesheet", href="/css/new-ingredient")
+
+block append scripts
+  script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js")
+  script(src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js")
+  script(src="https://hammerjs.github.io/dist/hammer.js")
+  script(src="/js/homePage.js")
+  script(src="/js/ingredient.js")
+
+
+block content
+  - $goldenTicketData = ["movieTitle" => "Docteur ?", "releaseDate" => "11 Septembre 2019"]
+  - $ArticlesData = ["shaving" => [["product-name" => "better-shave 175ml", "product-type" => "Crème de rasage","price" => 9.99,"imgSrc" => "/images/newSite/products/coffret/rituel/Monsieur-Barbier-Coffret-Cadeau-Rasage-Rituel-Barbier-Produits-XL.png"],["product-name" => "better-shave 175ml", "product-type" => "Crème de rasage","price" => 9.99,"imgSrc" => "/images/newSite/products/coffret/rituel/Monsieur-Barbier-Coffret-Cadeau-Rasage-Rituel-Barbier-Produits-XL.png"],["product-name" => "better-shave 175ml", "product-type" => "Crème de rasage","price" => 9.99,"imgSrc" => "/images/newSite/products/coffret/rituel/Monsieur-Barbier-Coffret-Cadeau-Rasage-Rituel-Barbier-Produits-XL.png"]],"skin" => [["product-name" => "better-shave 175ml", "product-type" => "Crème de rasage","price" => 9.99,"imgSrc" => "/images/newSite/products/coffret/rituel/Monsieur-Barbier-Coffret-Cadeau-Rasage-Rituel-Barbier-Produits-XL.png"],["product-name" => "better-shave 175ml", "product-type" => "Crème de rasage","price" => 9.99,"imgSrc" => "/images/newSite/products/coffret/rituel/Monsieur-Barbier-Coffret-Cadeau-Rasage-Rituel-Barbier-Produits-XL.png"],["product-name" => "better-shave 175ml", "product-type" => "Crème de rasage","price" => 9.99,"imgSrc" => "/images/newSite/products/coffret/rituel/Monsieur-Barbier-Coffret-Cadeau-Rasage-Rituel-Barbier-Produits-XL.png"]],"beard" => [["product-name" => "better-shave 175ml", "product-type" => "Crème de rasage","price" => 9.99,"imgSrc" => "/images/newSite/products/coffret/rituel/Monsieur-Barbier-Coffret-Cadeau-Rasage-Rituel-Barbier-Produits-XL.png"],["product-name" => "better-shave 175ml", "product-type" => "Crème de rasage","price" => 9.99,"imgSrc" => "/images/newSite/products/coffret/rituel/Monsieur-Barbier-Coffret-Cadeau-Rasage-Rituel-Barbier-Produits-XL.png"],["product-name" => "better-shave 175ml", "product-type" => "Crème de rasage","price" => 9.99,"imgSrc" => "/images/newSite/products/coffret/rituel/Monsieur-Barbier-Coffret-Cadeau-Rasage-Rituel-Barbier-Produits-XL.png"]]]
+  .container
+    .header-btn
+      a(href="../glossaire")
+        button.back-btn
+          i.fa.fa-angle-left
+          span Retour au glossaire
+        button.mobile-back-btn
+          i.fa.fa-angle-left
+    .hero
+      .hero-image
+        - $imageName = $ingredient['image']
+        img(src="/images/newSite/ingredients/" + imageName, height="212px", width="212px")
+      .hero-content
+        p= ingredient.name
+        h2= ingredient.frenchName
+        p= ingredient.description
+
+    p.product-title Produits contenant cet ingrédient
+    .owl-carousel.owl-theme
+      - foreach($linkedProducts as $article)
+      - $hisPath = $pathFor('singleProductPage-'.$article['category'], ['slug' => $article['slug']])
+        .item
+          .product-slider-item
+            .product-item
+              .product-price
+                p
+                  span 9
+                  span ,50€
+              .product-image
+                - $upsellImageSrc = $imageLink($article['upsellImagePath'], ['w' => 240]);
+                img(src=$upsellImageSrc, alt="", width="280px", height="298px")
+              p.product-name=article.type
+              p.product-amount=article.name
+              a(href=hisPath)
+                button.product-cart-btn Ajouter au panier
+
+    .comment-section
+      h2 Naturel oui,
+      h2 barbant jamais
+      .comment-content
+        .comment-content-item
+          p Entre nous messieurs, vous n’en avez pas marre des produits à l’odeur synthétique et à la composition douteuse ? Plutôt envie d’un retour au naturel, avec des formules saines qui préservent votre capital beauté ?
+          p Nous aussi, c’est pourquoi Monsieur BARBIER a repensé la conception des produits pour hommes afin d’imaginer des produits les plus naturels possible, en choisissant soigneusement chaque ingrédient et chaque actif , pour un équilibre sans compromis entre efficacité, sensorialité et naturalité. Le naturel, oui, mais pas aux dépens du style, ni du plaisir.
+        .comment-content-item.desktop-comment-content Dans cette démarche, Monsieur BARBIER est une des seules marques pour hommes adhérente à COSMEBIO et soumise aux audits d’ECOCERT, pour ses produits labelisés Cosmos Nat. Et tous nos produits sont exempts d’ingrédients controversés, ou d’ingrédients d’origine animale. Même pas mal ! Saviez-vous que notre huile Full Care fut la première huile pour barbe au monde à recevoir le label Cosmos Nat ? En plus d’être la première huile sèche dans sa catégorie, mais ça on vous laissera en découvrir les bienfaits par vous-mêmes.
+        .mobile-comment-content
+          p Dans cette démarche, Monsieur BARBIER est une des seules marques pour hommes adhérente à COSMEBIO et soumise aux audits d’ECOCERT, pour ses produits labelisés Cosmos Nat. Et tous nos produits sont exempts d’ingrédients controversés, ou d’ingrédients d’origine animale. Même pas mal !
+          p Saviez-vous que notre huile Full Care fut la première huile pour barbe au monde à recevoir le label Cosmos Nat ? En plus d’être la première huile sèche dans sa catégorie, mais ça on vous laissera en découvrir les bienfaits par vous-mêmes.
+      a(href="../qui-sommes-nous")
+        button.about-btn Qui sommes-nous ?
+      img.comment-woman-image(src="/images/commons/Perso-Celeste.png", alt="", height="300px", width="300px")
+        

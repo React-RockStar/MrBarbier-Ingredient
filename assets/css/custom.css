@@ -1,0 +1,624 @@
+@font-face {
+	font-family: BrandonGrotesque;
+	src: url(../fonts/Brandon/Brandon_med.otf);
+}
+@font-face {
+	font-family: DMSerifDisplay;
+	src: url(../fonts/DMSerifDisplay/DMSerifDisplay-Regular.ttf);
+}
+body {
+	/* max-width: 1440px; */
+	width: 100%;
+	margin: auto;
+	font-family: BrandonGrotesque;
+	color: #1d1d1b;
+}
+
+/* Common class */
+.container{	
+	position: relative;
+}
+.w-100{
+	width: 100%;
+}
+.d-flex{
+	display: flex;
+}
+.d-block {
+	display: block;
+}
+a {
+	text-decoration: none;
+}
+/* End common class */
+/* Side Area class */
+.Side {
+	width: 10%;
+	padding: 153px 87px 30px 58px;
+	opacity: 0.51;
+	background-color: #eeeeee;
+}
+.Side-link {
+	display: grid;
+}
+.Bienvenue-Ganal {
+	margin: 0 0 53px;
+	font-family: DMSerifDisplay;
+	font-size: 34px;
+	font-weight: normal;
+	font-stretch: normal;
+	font-style: normal;
+	line-height: 1;
+	letter-spacing: normal;
+	color: #000000;
+}
+.Mes-abonnements {
+	margin: 0 0 24px 8px;
+	font-family: BrandonGrotesque;
+	font-size: 10px;
+	font-weight: bold;
+	font-stretch: normal;
+	font-style: normal;
+	line-height: 1.1;
+	letter-spacing: normal;
+	color: #38408f;
+}
+.Mes-coordonnes {
+	margin: 24px 6px 24px 0;
+	font-family: BrandonGrotesque;
+	font-size: 10px;
+	font-weight: bold;
+	font-stretch: normal;
+	font-style: normal;
+	line-height: 1.1;
+	letter-spacing: normal;
+	color: #1d1d1b;
+}
+.refill {
+	margin: 24px 74px 24px 0;
+	font-family: BrandonGrotesque;
+	font-size: 10px;
+	font-weight: bold;
+	font-stretch: normal;
+	font-style: normal;
+	line-height: 1.1;
+	letter-spacing: normal;
+	color: #1d1d1b;
+}
+.Dconnexion  {
+	margin: 24px 31px 0 0;
+	opacity: 0.16;
+	font-family: BrandonGrotesque;
+	font-size: 10px;
+	font-weight: bold;
+	font-stretch: normal;
+	font-style: normal;
+	line-height: 1.1;
+	letter-spacing: normal;
+	color: #1d1d1b;
+}
+/* End Side Area class */
+/* Main Ara class */
+.Main {
+	width: 90%;
+	margin: 16px 1px 16px 0;
+	padding: 0 50px 0 24px;
+	border-radius: 8px;
+	background-color: #ffffff;
+}
+/* Mes abonnements classes */
+.abonnements-title {
+	font-family: BrandonGrotesque;
+	font-size: 24px;
+	font-weight: bold;
+	font-stretch: normal;
+	font-style: normal;
+	line-height: 1.08;
+	letter-spacing: normal;
+	color: #38408f;
+}
+.Ajouter-abonnement {
+	padding: 10px 17px 10px 16px;
+	border-radius: 26px;
+	border: 1px solid #eee;
+	background-color: #fff;
+	font-family: BrandonGrotesque;
+	font-size: 12px;
+	font-weight: 500;
+	font-stretch: normal;
+	font-style: normal;
+	line-height: 1.67;
+	letter-spacing: normal;
+	text-align: center;
+	color: #1d1d1b;
+	height: 20%;
+    margin-top: auto;
+	margin-bottom: auto;
+	margin-left: auto;
+}
+.report {
+	height: 10%;
+	border-radius: 8px;
+	background-color: #81be5c;
+}
+.mon-product-1 {
+	padding: 20px 32px 50px 24px;
+	border-radius: 8px;
+	border: solid 1px #ebebeb;
+	margin-bottom: -39px;
+}
+.mon-product-2 {
+	margin-top: 14px;
+	border-radius: 8px;
+	border: solid 1px #ebebeb;
+	margin-bottom: 14px;
+}
+.product-img {
+	width: 15%;
+}
+.mon-product {
+	width: 20%;
+	margin: auto;
+}
+.product-subtitle {
+	font-family: BrandonGrotesque;
+	font-size: 10px;
+	font-weight: bold;
+	font-stretch: normal;
+	font-style: normal;
+	line-height: 1.1;
+	letter-spacing: normal;
+	color: #adadad;
+}
+.product-title {
+	font-family: BrandonGrotesque;
+	font-size: 16px;
+	font-weight: bold;
+	font-stretch: normal;
+	font-style: normal;
+	line-height: 1.13;
+	letter-spacing: normal;
+	color: #1d1d1b;
+	margin: 10px 0px 0px 0px;
+}
+.product-des {
+	font-family: BrandonGrotesque;
+	font-size: 12px;
+	font-weight: 500;
+	font-stretch: normal;
+	font-style: normal;
+	line-height: 1.5;
+	letter-spacing: normal;
+	color: #c1c1c1;
+}
+.product-subtitle-2 {
+	font-family: BrandonGrotesque;
+	font-size: 10px;
+	font-weight: bold;
+	font-stretch: normal;
+	font-style: normal;
+	line-height: 1.1;
+	letter-spacing: normal;
+	color: #9ea3d6;
+}
+.product-title-2 {
+	font-family: BrandonGrotesque;
+	font-size: 16px;
+	font-weight: bold;
+	font-stretch: normal;
+	font-style: normal;
+	line-height: 1.13;
+	letter-spacing: normal;
+	color: #ffffff;
+	margin: 10px 0px 0px 0px;
+}
+.product-des-2 {
+	font-family: BrandonGrotesque;
+	font-size: 12px;
+	font-weight: 500;
+	font-stretch: normal;
+	font-style: normal;
+	line-height: 1.5;
+	letter-spacing: normal;
+	color: #c1c1c1;
+}
+.product-denvol {
+	width: 20%;
+	margin-bottom: auto;
+    margin-top: 3%;
+}
+.prodcut-envol {
+	width: 20%;
+	margin-bottom: auto;
+    margin-top: 3%;
+}
+.product-montant {
+	width: 20%;
+	margin-bottom: auto;
+    margin-top: 3%;
+}
+.drop-btn {
+	width: 5%;
+    margin: auto;
+    padding: 12px 0px;
+    border-radius: 50%;
+    background: #eee;
+    border: solid 1px #ebebeb;
+    text-align: center;
+}
+.drop-btn-2 {
+	width: 5%;
+    margin: auto;
+    padding: 12px 0px;
+    border-radius: 50%;
+	background: #ffffff;
+	opacity: 0.16;
+    border: solid 1px #ebebeb;
+    text-align: center;
+}
+.mon-prodcut-button {
+	border-radius: 0px 0px 8px 8px;
+	background-color: #81be5c;
+	font-family: BrandonGrotesque;
+	font-size: 12px;
+	font-weight: 500;
+	font-stretch: normal;
+	font-style: normal;
+	line-height: normal;
+	letter-spacing: normal;
+	text-align: center;
+	color: #ffffff;
+	padding: 10px 0px;
+	border: none;
+}
+.second-price {
+	opacity: 0.4;
+	margin-left: 10px;
+}
+.accordion-title-2 {
+	background-color: #38408f;
+	border-radius: 8px 8px 0px 0px;
+	padding: 20px 32px 20px 24px;
+}
+.accordion-content-2 {
+	padding: 20px 32px 20px 24px;
+	text-align: center;
+	justify-content: space-between;
+}
+.accordion-btn {
+	width: 10px;
+	height: 8px;
+}
+.accordion-btn-2 {
+	width: 10px;
+	height: 8px;
+}
+.content-title {
+	font-family: BrandonGrotesque;
+	font-size: 10px;
+	font-weight: bold;
+	font-stretch: normal;
+	font-style: normal;
+	line-height: 1.1;
+	letter-spacing: normal;
+	color: #1d1d1b;
+}
+.mail {
+	padding: 10px;
+	position: relative;
+}
+.icon-enveloppe {
+	width: 56px;
+	height: 56px;
+	margin: 0 0 2px;
+	object-fit: contain;
+}
+.icon-envoi {
+	margin: 8px 8px 0 0;
+	padding: 16px;
+	border-radius: 36px;
+	background-color: #eeeeee;
+}
+.right-arrow {
+	padding: 10px;
+	position: relative;
+}
+.inner-badge {
+	position: absolute;
+	top: -4px;
+    right: 12px;
+}
+.inner-badge-1 {
+	position: absolute;
+	top: -11px;
+    right: -7px;
+}
+.badge-text {
+	border-radius: 50%;
+    background-color: #fff;
+	padding: 0px 10px;
+	font-family: BrandonGrotesque;
+	font-size: 16px;
+	font-weight: bold;
+	font-stretch: normal;
+	font-style: normal;
+	line-height: normal;
+	letter-spacing: normal;
+	color: rgba(29, 29, 27, 0.4);
+}
+.badge-img {
+	width: 38px;
+}
+.content-btn {
+	border-radius: 26px;
+	background-color: #ffffff;
+	border: 1px solid #959595;
+	padding: 11px 24px 11px 16px;
+	font-family: BrandonGrotesque;
+	font-size: 16px;
+	font-weight: bold;
+	font-stretch: normal;
+	font-style: normal;
+	line-height: 1.63;
+	letter-spacing: normal;
+	text-align: center;
+	color: #adadad;
+	margin-top: 20px;
+}
+.content-btn-1 {
+	border-radius: 26px;
+	background-color: #ffffff;
+	border: 1px solid #38408f;
+	padding: 11px 24px 11px 16px;
+	font-family: BrandonGrotesque;
+	font-size: 16px;
+	font-weight: bold;
+	font-stretch: normal;
+	font-style: normal;
+	line-height: 1.63;
+	letter-spacing: normal;
+	text-align: center;
+	color: #38408f;
+	margin-top: 20px;
+}
+.pause {
+	margin-right: 10px;
+	vertical-align: middle;
+	padding-bottom: 5px;
+}
+.prodcut-btn {
+	padding: 7px 12px 6px 10px;
+	border-radius: 8px;
+	background-color: #ca7a35;
+	border: none;
+	font-family: BrandonGrotesque;
+	font-size: 8px;
+	font-weight: bold;
+	font-stretch: normal;
+	font-style: normal;
+	line-height: 1.38;
+	letter-spacing: normal;
+	text-align: center;
+	color: #ffffff;
+	margin-top: 15px;
+}
+.details-part {
+	justify-content: space-between;
+}
+.mon-product-3 {
+	border-radius: 8px;
+    border: solid 1px #ebebeb;
+}
+.model-btn {
+	padding: 10px 22px 10px 23px;
+	border-radius: 26px;
+	border:1px solid #4d4d4e;
+	background-color: #fff;
+	font-family: BrandonGrotesque;
+	font-size: 12px;
+	font-weight: 500;
+	font-stretch: normal;
+	font-style: normal;
+	line-height: 1.67;
+	letter-spacing: normal;
+	text-align: center;
+	color: #1d1d1b;
+	margin-right: 20px;
+}
+.model-text {
+	font-family: BrandonGrotesque;
+	font-size: 10px;
+	font-weight: bold;
+	font-stretch: normal;
+	font-style: normal;
+	line-height: 1.1;
+	letter-spacing: normal;
+	text-align: center;
+	color: #1d1d1b;
+	margin-right: 20px;
+	margin-top: auto;
+	margin-bottom: auto;
+}
+.model-text-1 {
+	opacity: 0.24;
+	font-family: BrandonGrotesque;
+	font-size: 12px;
+	font-weight: 500;
+	font-stretch: normal;
+	font-style: normal;
+	line-height: 1.67;
+	letter-spacing: normal;
+	text-align: center;
+	color: #1d1d1b;
+	margin-left: auto;
+}
+.button-wrapper {
+	position: relative;
+	width: 180px;
+	text-align: center;
+	margin: 10% auto;
+}
+  
+.button-wrapper span.label {
+	position: relative;
+	z-index: 0;
+	display: inline-block;
+	width: 100%;
+	cursor: pointer;
+	padding: 10px 0;
+	padding: 10px 17px 10px 16px;
+	border-radius: 26px;
+	border: 1px solid #eeeeee;
+	font-family: BrandonGrotesque;
+	font-size: 12px;
+	font-weight: 500;
+	font-stretch: normal;
+	font-style: normal;
+	line-height: 1.67;
+	letter-spacing: normal;
+	text-align: center;
+	color: #1d1d1b;
+}
+  
+#upload {
+	display: inline-block;
+	position: absolute;
+	z-index: 1;
+	width: 100%;
+	height: 50px;
+	top: 0;
+	left: 0;
+	opacity: 0;
+	cursor: pointer;
+}
+.file-upload {
+	margin-top: 14px;
+	padding: 0px;
+	border: 1px dashed #9c9c9c;
+	border-radius: 8px;
+}
+.coordennees-title {
+	font-family: BrandonGrotesque;
+	font-size: 24px;
+	font-weight: bold;
+	font-stretch: normal;
+	font-style: normal;
+	line-height: 1.08;
+	letter-spacing: normal;
+	color: #38408f;
+}
+.form-group {
+	text-align: left;
+}
+.compte-infors {
+	width: 66.67%;
+}
+.compte-infor {
+	width: 50%;
+}
+.livraison-infor {
+	width: 50%;
+}
+.payment-infor {
+	width: 33.33%;
+	border-left: 1px solid #979797;
+	padding-left: 20px;
+}
+.compte-infors-title {
+	font-family: BrandonGrotesque;
+	font-size: 16px;
+	font-weight: bold;
+	font-stretch: normal;
+	font-style: normal;
+	line-height: 1.13;
+	letter-spacing: normal;
+	color: #1d1d1b;
+}
+input, label {
+    display:block;
+}
+input {
+	border-radius: 7px;
+	padding: 11px 31px 11px 16px;
+	border: 1px solid #eee;
+	width: 50%;
+}
+label {
+	margin-bottom: 10px;
+	margin-top: 15px;
+	font-family: BrandonGrotesque;
+	font-size: 10px;
+	font-weight: bold;
+	font-stretch: normal;
+	font-style: normal;
+	line-height: 1.1;
+	letter-spacing: normal;
+	color: #1d1d1b;
+}
+::placeholder {
+	font-family: BrandonGrotesque;
+	font-size: 16px;
+	font-weight: normal;
+	font-stretch: normal;
+	font-style: normal;
+	line-height: 1.63;
+	letter-spacing: normal;
+	color: #c1c1c1;
+}
+#new-pass {
+	margin-bottom: 10px;
+}
+#address {
+	margin-bottom: 10px;
+}
+#additional-address {
+	margin-bottom: 10px;
+}
+#postal-code {
+	margin-bottom: 10px;
+	margin-right: 10px;
+}
+#nimes {
+	margin-bottom: 10px;
+	margin-right: 20px;
+}
+.btn-group {
+	padding-top: 20px;
+	padding-right: 20px;
+	justify-content: space-between;
+	width: 63%;
+}
+.btn-discard {
+	padding: 10px 22px 10px 23px;
+	border-radius: 26px;
+	border: 1px solid #eee;
+	background-color: #ffffff;
+	font-family: BrandonGrotesque;
+	font-size: 12px;
+	font-weight: 500;
+	font-stretch: normal;
+	font-style: normal;
+	line-height: 1.67;
+	letter-spacing: normal;
+	text-align: center;
+	color: #1d1d1b;
+}
+.btn-validate {
+	padding: 10px 22px 10px 23px;
+	border-radius: 26px;
+	border: 1px solid #38408f;
+	background-color: #ffffff;
+	font-family: BrandonGrotesque;
+	font-size: 12px;
+	font-weight: 500;
+	font-stretch: normal;
+	font-style: normal;
+	line-height: 1.67;
+	letter-spacing: normal;
+	text-align: center;
+	color: #38408f;
+}
+.means-payment {
+	
+}
+/* End Main Area class */
